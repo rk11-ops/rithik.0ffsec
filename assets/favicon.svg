@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RC portfolio mark">
+  <rect width="64" height="64" rx="7" fill="#08090b"/>
+  <rect x="5" y="5" width="54" height="54" rx="3" fill="none" stroke="#ff3a45" stroke-width="1.25"/>
+  <path d="M16 17h16a9 9 0 0 1 0 18h-5l13 13H29L17 36V17Zm8 7v7h8a3.5 3.5 0 0 0 0-7h-8Z" fill="#ecebe7" fill-rule="evenodd"/>
+  <path d="M39 17h9v24h-9z" fill="#ff3a45"/>
+  <path d="M14 52h36" stroke="#ff3a45" stroke-width="1.5"/>
+</svg>

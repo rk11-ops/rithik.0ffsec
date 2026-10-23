@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" data-theme="red">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Rithik Chauhan — VAPT analyst focused on web, API, mobile and thick-client application security.">
+  <title>Rithik Chauhan · Red Team</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- PRELOADER -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <pre id="loader-log"></pre>
+      <div class="loader-bar"><i id="loader-fill"></i></div>
+      <div class="loader-pct"><span id="loader-pct">000</span>%</div>
+    </div>
+  </div>
+
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="fx-grain" aria-hidden="true"></div>
+  <div class="fx-scan" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><i></i><b></b></div>
+  <div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top" aria-label="Rithik Chauhan — top"><span class="mark">RC</span><span class="nav-brand-t">TARGET<b>/</b>RITHIK</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#about"><i>01</i>About</a>
+      <a href="#method"><i>02</i>Method</a>
+      <a href="#work"><i>03</i>Work</a>
+      <a href="#toolkit"><i>04</i>Toolkit</a>
+      <a href="#contact"><i>05</i>Contact</a>
+    </nav>
+    <a class="btn btn-sm magnetic" href="#contact"><span>Hire me</span><i>↗</i></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO / ASSESSMENT -->
+    <section class="hero" id="hero">
+      <div class="hero-stick">
+        <div class="hero-top">
+          <p class="eyebrow"><span class="dot"></span>TARGET</p>
+          <h1 class="name glitch" id="name" data-text="RITHIK CHAUHAN"><a href="#top">RITHIK CHAUHAN</a></h1>
+          <p class="sub">red team <b>/</b> VAPT &amp; application security</p>
+          <div class="statusbar" id="statusbar">
+            <span><em>target</em> <b>rithik-sec.local</b></span>
+            <span><em>findings</em> <b id="st-find">0</b></span>
+            <span><em>patched</em> <b id="st-patch">0</b></span>
+            <span><em>state</em> <b id="st-state" class="st-idle">idle</b></span>
+          </div>
+        </div>
+
+        <div class="hero-mid">
+          <h2 class="headline" id="headline" aria-label="Every layer has a weak spot.">
+            <span class="hl-line"><span class="hl-w">Every</span> <span class="hl-w">layer</span></span>
+            <span class="hl-line"><span class="hl-w">has</span> <span class="hl-w">a</span> <span class="hl-w hl-out">weak</span> <span class="hl-w hl-out">spot.</span></span>
+          </h2>
+        </div>
+
+        <div class="hero-bot">
+          <div class="scrollcue"><span class="scrollcue-line"></span><span>Scroll to run the assessment</span><span class="scrollcue-arrow">↓</span></div>
+          <div class="pipeline" id="pipeline">
+            <div class="pipe-rail"><i id="pipe-fill"></i><b id="pipe-packet"></b></div>
+            <div class="stage" data-i="0"><span class="stage-id">L1</span><h3>Client</h3><span class="stage-st" data-st>queued</span><span class="stage-bar"><i></i></span></div>
+            <div class="stage" data-i="1"><span class="stage-id">L2</span><h3>Edge / CDN</h3><span class="stage-st" data-st>queued</span><span class="stage-bar"><i></i></span></div>
+            <div class="stage" data-i="2"><span class="stage-id">L3</span><h3>App server</h3><span class="stage-st" data-st>queued</span><span class="stage-bar"><i></i></span></div>
+            <div class="stage" data-i="3"><span class="stage-id">L4</span><h3>API</h3><span class="stage-st" data-st>queued</span><span class="stage-bar"><i></i></span></div>
+            <div class="stage" data-i="4"><span class="stage-id">L5</span><h3>Database</h3><span class="stage-st" data-st>queued</span><span class="stage-bar"><i></i></span></div>
+          </div>
+          <p class="hero-note">Illustrative sequence · this portfolio never scans any system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="At a glance">
+      <div class="stat"><b data-count="4" data-suffix="">0</b><span>Asset classes tested<br><small>web · API · mobile · thick client</small></span></div>
+      <div class="stat"><b data-count="23" data-suffix="">0</b><span>Security domains documented<br><small>in PentestingEverything</small></span></div>
+      <div class="stat"><b data-count="4" data-suffix="">0</b><span>Credentials earned<br><small>THM · NSDC · Hackviser</small></span></div>
+      <div class="stat"><b data-count="1" data-suffix="">0</b><span>Recon framework built<br><small>ReconForge · Python CLI</small></span></div>
+    </section>
+
+    <!-- TICKERS -->
+    <section class="tickers" aria-hidden="true" id="tickers">
+      <div class="ticker ticker-a"><div class="ticker-track"><span>Recon</span><i>✕</i><span>Scan</span><i>✕</i><span>Enumerate</span><i>✕</i><span>Exploit</span><i>✕</i><span>Report</span><i>✕</i><span>Repeat</span><i>✕</i><span>Recon</span><i>✕</i><span>Scan</span><i>✕</i><span>Enumerate</span><i>✕</i><span>Exploit</span><i>✕</i><span>Report</span><i>✕</i><span>Repeat</span><i>✕</i></div></div>
+      <div class="ticker ticker-b"><div class="ticker-track"><span>Authorized testing only</span><i>●</i><span>Evidence over noise</span><i>●</i><span>No client data exposed</span><i>●</i><span>Scope first</span><i>●</i><span>Authorized testing only</span><i>●</i><span>Evidence over noise</span><i>●</i><span>No client data exposed</span><i>●</i><span>Scope first</span><i>●</i></div></div>
+    </section>
+
+    <!-- 01 ABOUT -->
+    <section class="sec" id="about">
+      <span class="sec-num" aria-hidden="true">01</span>
+      <header class="sec-head"><p class="sec-k"><i>01</i> About</p><h2 class="split">I break systems to understand them.</h2></header>
+      <div class="about-grid">
+        <blockquote class="quote reveal">“I write security reports the way I’d want to receive them — reproducible, prioritized, and fixable.”</blockquote>
+        <div class="about-copy reveal">
+          <p>I’m <b>Rithik Chauhan</b>, a VAPT analyst focused on practical application security, vulnerability validation and evidence-led reporting.</p>
+          <p>My work spans web applications, APIs, Android/iOS, thick-client applications and network environments. I map the attack surface, validate weaknesses, separate exploitable issues from scanner noise, and communicate impact with actionable remediation.</p>
+          <button class="btn magnetic" type="button" data-open-certificates><span>Open credential vault</span><i>↗</i></button>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li class="tl reveal"><span class="tl-y">WORK</span><div><h3>Shieldersoft Technologies Pvt Ltd</h3><p>VAPT / AppSec — hands-on assessment across web, API, Android/iOS and thick-client environments, including manual testing, reporting and remediation retesting.</p></div></li>
+        <li class="tl reveal"><span class="tl-y">WORK</span><div><h3>RiskBricks Solution Private Limited</h3><p>Security assessment — validation, structured evidence, severity analysis and report-ready remediation guidance across authorized environments.</p></div></li>
+        <li class="tl reveal"><span class="tl-y">SCOPE</span><div><h3>Partner-led &amp; government-facing projects</h3><p>Public summary only. Customer names, production URLs, IPs and findings evidence are intentionally omitted.</p></div></li>
+        <li class="tl reveal"><span class="tl-y">2025</span><div><h3>Python Programming — LearnVern · NSDC</h3><p>Grade A · 17 Apr 2025.</p></div></li>
+        <li class="tl reveal"><span class="tl-y">2025</span><div><h3>TryHackMe — Jr Penetration Tester &amp; Red Teaming paths</h3><p>10 Aug 2025 (30h 40m) and 27 Aug 2025 (50h 20m).</p></div></li>
+        <li class="tl reveal"><span class="tl-y">2026</span><div><h3>Hackviser — Certified Cybersecurity Foundations (CORE)</h3><p>Issued 23 Oct 2026 · ID HV-CORE-DBVLVBXG.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- 02 METHOD -->
+    <section class="sec" id="method">
+      <span class="sec-num" aria-hidden="true">02</span>
+      <header class="sec-head"><p class="sec-k"><i>02</i> Method</p><h2 class="split">A repeatable testing process.</h2></header>
+      <p class="sec-intro reveal">Tools find signals. Methodology turns signals into findings that can be explained, reproduced, fixed and retested. Static analysis (SAST) reviews the code; dynamic testing (DAST) probes the running application — together they cover what the code says and what the application does.</p>
+      <div class="phases">
+        <article class="phase reveal" data-type>
+          <span class="phase-n">1</span>
+          <div class="phase-body"><h3>Recon</h3><p>Define scope, passively map exposed assets, understand technologies and identify likely entry points before testing deeper.</p><div class="chips"><span>ReconForge</span><span>OSINT</span><span>Nmap</span></div></div>
+          <pre class="term"><code>$ scope --confirm example-app
+✓ authorized scope loaded
+$ recon --passive example.com
+→ 14 hosts · 6 technologies mapped</code></pre>
+        </article>
+        <article class="phase reveal" data-type>
+          <span class="phase-n">2</span>
+          <div class="phase-body"><h3>Scan</h3><p>Review exposed services and configurations, then prioritize the signals that deserve manual investigation.</p><div class="chips"><span>Nmap</span><span>OWASP ZAP · passive</span><span>Nuclei</span><span>OpenText Fortify</span></div></div>
+          <pre class="term"><code>$ nmap -sV -T3 example.com
+443/tcp open  https
+$ nuclei -u https://example.com
+→ 3 signals queued for validation</code></pre>
+        </article>
+        <article class="phase reveal" data-type>
+          <span class="phase-n">3</span>
+          <div class="phase-body"><h3>Enumerate</h3><p>Trace routes, identities and API boundaries to understand where trust and sensitive data move.</p><div class="chips"><span>Burp Suite</span><span>Postman</span><span>ffuf</span><span>Wireshark</span></div></div>
+          <pre class="term"><code>$ ffuf -u https://example.com/FUZZ -w common.txt
+→ /api  /admin  /static
+$ map --roles --objects
+→ 4 roles · 11 object types</code></pre>
+        </article>
+        <article class="phase reveal" data-type>
+          <span class="phase-n">4</span>
+          <div class="phase-body"><h3>Exploit</h3><p>Validate suspected weaknesses safely within scope, confirm impact and remove false positives before anything is reported.</p><div class="chips"><span>OWASP ZAP · authorized active</span><span>SQLMap</span><span>Frida</span><span>Metasploit</span></div></div>
+          <pre class="term"><code>$ validate --finding F-02 --safe
+→ BOLA confirmed · minimal impact
+$ evidence --capture F-02
+✓ request / response saved</code></pre>
+        </article>
+        <article class="phase reveal" data-type>
+          <span class="phase-n">5</span>
+          <div class="phase-body"><h3>Report</h3><p>Developer-focused findings: reproducible proof, risk-based prioritization, clear fixes — and a retest to close the loop.</p><div class="chips"><span>Evidence</span><span>Severity</span><span>Retest</span></div></div>
+          <pre class="term"><code>$ report --format dev
+✓ 3 findings · fixes attached
+$ retest --all
+→ 3/3 patched · status: closed</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 WORK -->
+    <section class="sec" id="work">
+      <span class="sec-num" aria-hidden="true">03</span>
+      <header class="sec-head"><p class="sec-k"><i>03</i> Selected work</p><h2 class="split">Build. Test. Document.</h2></header>
+      <div class="works">
+        <article class="work work-lg reveal tilt">
+          <span class="work-n">3.1</span>
+          <div class="work-main"><p class="work-k">Personal build · Python CLI</p><h3>ReconForge</h3><p>Reconnaissance workflow for discovery, evidence correlation, adaptive follow-up, finding validation and consolidated reporting — built to reduce blind scanner chaining and keep results organized by evidence.</p>
+            <div class="flow"><span>Recon</span><i>→</i><span>Evidence</span><i>→</i><span>Adapt</span><i>→</i><span>Validate</span><i>→</i><span>Report</span></div>
+            <a class="link" href="https://github.com/rk11-ops" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a></div>
+        </article>
+        <article class="work reveal tilt">
+          <span class="work-n">3.2</span>
+          <div class="work-main"><p class="work-k">Lab · FastAPI</p><h3>Clickjacking PoC Lab</h3><p>A controlled lab for demonstrating and examining clickjacking behavior, with emphasis on frame protections and reproducible observations.</p><div class="chips"><span>FastAPI</span><span>HTTP headers</span><span>Controlled lab</span></div></div>
+        </article>
+        <article class="work reveal tilt">
+          <span class="work-n">3.3</span>
+          <div class="work-main"><p class="work-k">Assessment area · Web &amp; API</p><h3>Web &amp; API Security</h3><p>Authentication, object-level authorization, sessions, business logic, injection handling and sensitive data exposure — documented for remediation.</p><div class="chips"><span>Burp Suite</span><span>Postman</span><span>OWASP ZAP</span><span>Manual validation</span></div></div>
+        </article>
+        <article class="work reveal tilt">
+          <span class="work-n">3.4</span>
+          <div class="work-main"><p class="work-k">Assessment area · Android / iOS</p><h3>Mobile Security Research</h3><p>Static and dynamic assessment: hardcoded secrets, insecure logging, certificate pinning, runtime controls, WebViews, reverse engineering and API behavior.</p><div class="chips"><span>MobSF</span><span>Frida</span><span>JADX</span><span>ADB</span></div></div>
+        </article>
+        <a class="work reveal tilt" href="https://github.com/rk11-ops/PentestingEverything" target="_blank" rel="noopener noreferrer">
+          <span class="work-n">3.5</span>
+          <div class="work-main"><p class="work-k">Knowledge base · GitHub</p><h3 class="long">PentestingEverything</h3><p>A central security knowledge base covering methodologies, tools and references across 23 security domains.</p><div class="chips"><span>Methodology</span><span>References</span><span>23 domains</span></div><span class="link">Open repository ↗</span></div>
+        </a>
+      </div>
+
+      <h3 class="subhead reveal">Field notes</h3>
+      <div class="notes">
+        <article class="note reveal"><span>N/01</span><h4>Recon before exploitation</h4><p>How a better attack-surface map improves everything that follows.</p></article>
+        <article class="note reveal"><span>N/02</span><h4>BOLA: proving access control safely</h4><p>Minimal-impact object-level authorization testing and evidence capture.</p></article>
+        <article class="note reveal"><span>N/03</span><h4>Scanner noise vs real findings</h4><p>Why correlation, reproducibility and retesting matter.</p></article>
+        <article class="note reveal"><span>N/04</span><h4>Mobile runtime validation</h4><p>What to examine after static analysis of secrets and resilience controls.</p></article>
+        <article class="note reveal"><span>N/05</span><h4>Building ReconForge</h4><p>An evidence-first orchestrator that adapts its next step.</p></article>
+        <article class="note reveal"><span>N/06</span><h4>From finding to remediation</h4><p>Turning technical impact into fixes teams can reproduce and retest.</p></article>
+      </div>
+    </section>
+
+    <!-- 04 TOOLKIT -->
+    <section class="sec" id="toolkit">
+      <span class="sec-num" aria-hidden="true">04</span>
+      <header class="sec-head"><p class="sec-k"><i>04</i> Toolkit</p><h2 class="split">Tools &amp; technologies.</h2></header>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-proxy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13M13 4l3 3-3 3M21 17H8M11 14l-3 3 3 3"/></symbol><symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol><symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 3 10l7 3 3 7z"/><path d="M10 13 21 3"/></symbol><symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol><symbol id="i-hex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><circle cx="12" cy="12" r="2.5"/></symbol><symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V4h3M18 4h3v3M21 17v3h-3M6 20H3v-3M3 12h18"/></symbol><symbol id="i-bug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="12" rx="4"/><path d="M9 8a3 3 0 0 1 6 0M3 12h5M16 12h5M4 19l4-3M20 19l-4-3M5 6l3 3M19 6l-3 3"/></symbol><symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2-7 4 14 3-10 2 3h6"/></symbol><symbol id="i-tree" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4v16M5 8h6M5 16h6"/><rect x="11" y="5" width="8" height="6" rx="1"/><rect x="11" y="13" width="8" height="6" rx="1"/></symbol><symbol id="i-radar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12 19 5"/></symbol><symbol id="i-packet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 5v14"/></symbol><symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5"/></symbol><symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-router" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 17h.01M11 17h.01M8 14l-2-5M16 14l2-5M12 14V8"/></symbol><symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol><symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol><symbol id="i-term" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol><symbol id="i-hook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v9a4 4 0 1 1-4-4"/><circle cx="12" cy="3" r="1"/></symbol><symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10M7 6a8 8 0 1 0 10 0"/></symbol><symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M16 7l3 3M14 9l2 2"/></symbol><symbol id="i-heads" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-6M12 15c0-3-6-3-6-8M12 15c0-3 6-3 6-8M12 15V5"/><circle cx="6" cy="5" r="1.5"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="18" cy="5" r="1.5"/></symbol><symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-5-5"/></symbol><symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 6.3L21 12l-6.8 2.7L12 21l-2.2-6.3L3 12l6.8-2.7z"/></symbol><symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><circle cx="12" cy="12" r="2"/></symbol></defs></svg><div class="tk-sum reveal"><span><b>27</b> tools</span><i></i><span><b>8</b> categories</span><i></i><span><b>2</b> testing methodologies</span></div><div class="tk"><section class="tk-cat tk-web reveal" aria-label="Web Application &amp; API Security"><header class="tk-head"><span class="tk-l">A</span><h3>Web Application &amp; API Security</h3><span class="tk-c">9</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-proxy"/></svg><span class="tn">Burp Suite</span></li><li class="tool" style="--i:1"><svg class="ti" aria-hidden="true"><use href="#i-zap"/></svg><span class="tn">OWASP ZAP</span></li><li class="tool" style="--i:2"><svg class="ti" aria-hidden="true"><use href="#i-send"/></svg><span class="tn">Postman</span></li><li class="tool" style="--i:3"><svg class="ti" aria-hidden="true"><use href="#i-db"/></svg><span class="tn">SQLmap</span></li><li class="tool" style="--i:4"><svg class="ti" aria-hidden="true"><use href="#i-hex"/></svg><span class="tn">Nuclei</span></li><li class="tool" style="--i:5"><svg class="ti" aria-hidden="true"><use href="#i-scan"/></svg><span class="tn">Nikto</span></li><li class="tool" style="--i:6"><svg class="ti" aria-hidden="true"><use href="#i-bug"/></svg><span class="tn">Wapiti</span></li><li class="tool" style="--i:7"><svg class="ti" aria-hidden="true"><use href="#i-wave"/></svg><span class="tn">FFUF</span></li><li class="tool" style="--i:8"><svg class="ti" aria-hidden="true"><use href="#i-tree"/></svg><span class="tn">Feroxbuster</span></li></ul></section><section class="tk-cat tk-net reveal" aria-label="Network &amp; Infrastructure"><header class="tk-head"><span class="tk-l">B</span><h3>Network &amp; Infrastructure</h3><span class="tk-c">5</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-radar"/></svg><span class="tn">Nmap</span></li><li class="tool" style="--i:1"><svg class="ti" aria-hidden="true"><use href="#i-packet"/></svg><span class="tn">Wireshark</span></li><li class="tool" style="--i:2"><svg class="ti" aria-hidden="true"><use href="#i-target"/></svg><span class="tn">Metasploit Framework</span></li><li class="tool" style="--i:3"><svg class="ti" aria-hidden="true"><use href="#i-lock"/></svg><span class="tn">testssl.sh</span></li><li class="tool" style="--i:4"><svg class="ti" aria-hidden="true"><use href="#i-router"/></svg><span class="tn">RouterSploit</span></li></ul></section><section class="tk-cat tk-src reveal" aria-label="Source Code Security"><header class="tk-head"><span class="tk-l">C</span><h3>Source Code Security</h3><span class="tk-c">1</span></header><ul class="tk-grid"><li class="tool feat" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-shield"/></svg><span class="tn">OpenText Fortify</span><em>Source-code analysis</em></li></ul><div class="tk-meth"><span class="tk-meth-k">Methodologies</span><span class="meth"><svg class="ti" aria-hidden="true"><use href="#i-code"/></svg><b>SAST</b> Static Application Security Testing</span><span class="meth"><svg class="ti" aria-hidden="true"><use href="#i-wave"/></svg><b>DAST</b> Dynamic Application Security Testing</span></div></section><section class="tk-cat tk-mob reveal" aria-label="Mobile Application Security"><header class="tk-head"><span class="tk-l">D</span><h3>Mobile Application Security</h3><span class="tk-c">4</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-hook"/></svg><span class="tn">Frida</span></li><li class="tool" style="--i:1"><svg class="ti" aria-hidden="true"><use href="#i-phone"/></svg><span class="tn">MobSF</span></li><li class="tool" style="--i:2"><svg class="ti" aria-hidden="true"><use href="#i-term"/></svg><span class="tn">Android Debug Bridge (ADB)</span></li><li class="tool" style="--i:3"><svg class="ti" aria-hidden="true"><use href="#i-power"/></svg><span class="tn">Fastboot</span></li></ul></section><section class="tk-cat tk-env reveal" aria-label="Security Testing Environment"><header class="tk-head"><span class="tk-l">E</span><h3>Security Testing Environment</h3><span class="tk-c">1</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-term"/></svg><span class="tn">Kali Linux</span></li></ul></section><section class="tk-cat tk-pwd reveal" aria-label="Password &amp; Authentication Testing"><header class="tk-head"><span class="tk-l">F</span><h3>Password &amp; Authentication Testing</h3><span class="tk-c">2</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-heads"/></svg><span class="tn">Hydra</span></li><li class="tool" style="--i:1"><svg class="ti" aria-hidden="true"><use href="#i-key"/></svg><span class="tn">John the Ripper</span></li></ul></section><section class="tk-cat tk-osint reveal" aria-label="Reconnaissance &amp; OSINT"><header class="tk-head"><span class="tk-l">G</span><h3>Reconnaissance &amp; OSINT</h3><span class="tk-c">3</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-search"/></svg><span class="tn">Sherlock</span></li><li class="tool" style="--i:1"><svg class="ti" aria-hidden="true"><use href="#i-mail"/></svg><span class="tn">Mosint</span></li><li class="tool" style="--i:2"><svg class="ti" aria-hidden="true"><use href="#i-pin"/></svg><span class="tn">Seeker</span></li></ul></section><section class="tk-cat tk-ai reveal" aria-label="AI-Assisted Security Testing"><header class="tk-head"><span class="tk-l">H</span><h3>AI-Assisted Security Testing</h3><span class="tk-c">2</span></header><ul class="tk-grid"><li class="tool" style="--i:0"><svg class="ti" aria-hidden="true"><use href="#i-spark"/></svg><span class="tn">PentestGPT</span></li><li class="tool" style="--i:1"><svg class="ti" aria-hidden="true"><use href="#i-chip"/></svg><span class="tn">Ollama</span></li></ul></section></div>
+
+      <div class="term-box reveal" id="term-box">
+        <div class="term-head"><span class="term-dots"><i></i><i></i><i></i></span><b>rithik@sec:~</b><span>interactive · type <kbd>help</kbd></span></div>
+        <div class="term-out" id="term-out" role="log" aria-live="polite"></div>
+        <label class="term-in"><span>rithik@sec:~$</span><input id="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="try: help" aria-label="Terminal command input"></label>
+      </div>
+    </section>
+
+    <!-- 05 CONTACT -->
+    <section class="sec" id="contact">
+      <span class="sec-num" aria-hidden="true">05</span>
+      <header class="sec-head"><p class="sec-k"><i>05</i> Contact</p><h2 class="split">Let’s talk security.</h2></header>
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <p>Open to full-time roles, penetration tests and security conversations. Share the objective and the authorized scope — I’ll take it from there.</p>
+          <ul class="trust"><li><i></i>Encrypted channel (HTTPS)</li><li><i></i>Email not published on this page</li><li><i></i>No trackers, no cookies</li></ul>
+          <p class="loc">India · working worldwide</p>
+          <div class="contact-links"><a class="link" href="https://www.linkedin.com/in/rithik-chauhan/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="link" href="https://github.com/rk11-ops" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        </div>
+        <form class="form reveal" id="form" novalidate>
+          <label><span>Name</span><input name="name" type="text" required autocomplete="name"></label>
+          <label><span>Email</span><input name="email" type="email" required autocomplete="email"></label>
+          <label><span>Topic</span>
+            <select name="topic"><option>Full-time role</option><option>Penetration test</option><option>Security research</option><option>Just saying hi</option></select></label>
+          <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn-fill magnetic" type="submit"><span>Send</span><i>↗</i></button>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-big" aria-hidden="true">RITHIK<br>CHAUHAN</div>
+    <div class="foot-grid">
+      <p class="colophon">Set in Chakra Petch, Inter Tight &amp; IBM Plex Mono. Hand-built, statically served, no trackers.</p>
+      <div class="elsewhere"><h4>Elsewhere</h4><a href="https://www.linkedin.com/in/rithik-chauhan/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/rk11-ops" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://github.com/rk11-ops/PentestingEverything" target="_blank" rel="noopener noreferrer">PentestingEverything ↗</a></div>
+      <div class="dock" role="group" aria-label="Design variant"><h4>Variant</h4><div><button type="button" data-theme-set="red" class="on">v1 · red</button><button type="button" data-theme-set="toxic">v2 · toxic</button><button type="button" data-theme-set="ice">v3 · ice</button></div></div>
+    </div>
+    <div class="foot-bar"><span>© <span id="year">2026</span> Rithik Chauhan</span><button class="flag-btn" id="flag-btn" type="button">$ flag</button><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- CERT MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-bg" data-close></div>
+    <div class="modal-dlg" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head"><h3 id="modal-title">Credential vault</h3><button type="button" class="modal-x" data-close aria-label="Close">×</button></div>
+      <div class="modal-grid">
+        <article><span>01 / TryHackMe</span><h4>Jr Penetration Tester</h4><img loading="lazy" src="assets/certifications/THM-Jr-Penetration-Tester-Learning-Path.png" alt="Jr Penetration Tester certificate"><a href="assets/certifications/THM-Jr-Penetration-Tester-Learning-Path.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></article>
+        <article><span>02 / TryHackMe</span><h4>Red Teaming</h4><img loading="lazy" src="assets/certifications/THM-Red-Team-Learning-Path.png" alt="Red Teaming certificate"><a href="assets/certifications/THM-Red-Team-Learning-Path.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></article>
+        <article><span>03 / LearnVern · NSDC</span><h4>Python Programming</h4><img loading="lazy" src="assets/certifications/NSDC-Python-Programming-Certificate-Sanitized.png" alt="Python Programming certificate (sanitized)"><a href="assets/certifications/NSDC-Python-Programming-Certificate-Sanitized.png" target="_blank" rel="noopener noreferrer">Open image ↗</a></article>
+        <article><span>04 / Hackviser</span><h4>Certified Cybersecurity Foundations</h4><img loading="lazy" src="assets/certifications/Hackviser-Certified-Cybersecurity-Foundations.png" alt="Hackviser Certified Cybersecurity Foundations certificate"><a href="assets/certifications/Hackviser-Certified-Cybersecurity-Foundations.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a> <a href="https://hackviser.com/verify?id=HV-CORE-DBVLVBXG" target="_blank" rel="noopener noreferrer">Verify ↗</a></article>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
